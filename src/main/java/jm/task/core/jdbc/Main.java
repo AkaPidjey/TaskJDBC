@@ -19,12 +19,10 @@ public class Main {
 
         userService.removeUserById(2);
 
-        System.out.println(userService.getAllUsers());
-
-//        List<User> users = userService.getAllUsers();
-//        for (User element : users) {
-//            System.out.println(element.toString());
-//        }
+        List<User> users = userService.getAllUsers();
+        for (User element : users) {
+            System.out.println(element.toString());
+        }
 
         userService.cleanUsersTable();
 
