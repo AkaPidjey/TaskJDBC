@@ -1,7 +1,6 @@
 package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.util.Util;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -43,7 +42,7 @@ public class UserDaoJDBCImpl implements UserDao {
             preparedStatement.setString(2, lastName);
             preparedStatement.setInt(3, age);
             preparedStatement.executeUpdate();
-            System.out.println("Пользователь с именем – " + name + " добавлен в базу данных ");
+            System.out.println("Пользователь с именем – " + name + " добавлен в базу данных [user] ");
         } catch (SQLException e) {
             System.out.println("Ошибка сохранения пользователья в базе данных [user]");
             e.printStackTrace();
